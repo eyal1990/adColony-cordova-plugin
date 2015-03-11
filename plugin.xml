@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="org.apache.cordova.adcolony" version="0.0.1">
+        <name>AdColony</name>
+        <description>Cordova Ad Colony Plugin</description>
+        <license>Apache 2.0</license>
+        <keywords>cordova,adcolony</keywords>
+        <js-module src="www/adcolony.js" name="adcolony">
+            <clobbers target="window.plugins.adcolony" />
+        </js-module>
+        <platform name="ios">
+            <config-file target="config.xml" parent="/*">
+                <feature name="Echo">
+                    <param name="ios-package" value="Echo"/>
+                </feature>
+            </config-file>
+            <header-file src="src/echo.h" />
+            <source-file src="src/echo.m" />
+        </platform>
+    </plugin>
